@@ -156,6 +156,9 @@ bot.action('Le', (ctx) => {
  
 
 bot.launch()
+app.get('/', (req, res, next) =>{
+    res.json({msg:'your server is running'})
+ })
 
 app.listen(app.get('port'), server =>{
     console.info(`Server listen on port ${app.get('port')}`);
