@@ -3,7 +3,6 @@ A chat bot for getting information of user  developed using Node,MongoDb,Telegra
 
 
 
-
 How to run
 
 1:Clone the repo
@@ -11,3 +10,6 @@ How to run
 3:node index.js
 
 
+
+visit the bot after starting the server
+http://t.me/Aps_convo_bot
