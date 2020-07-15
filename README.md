@@ -5,6 +5,14 @@ A chat bot for getting information of user  developed using Node,MongoDb,Telegra
 
 How to run
 
+1:visit https://convobott.herokuapp.com/
+2:
+visit the bot after starting the server
+http://t.me/Aps_convo_bot
+
+
+or if the above server did not work then
+
 1:Clone the repo
 2:npm install
 3:node index.js
