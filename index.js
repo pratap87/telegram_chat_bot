@@ -1,13 +1,20 @@
 const express=require('express');
+require('dotenv').config()
 const app=express();
-app.set('port', process.env.port || 5000) 
+app.set('port', process.env.PORT || 5000) 
 
 const { Telegraf } = require('telegraf')
-const token='1218734290:AAHIDp8k7sUMcVi9e5dZVJwBejRmLtiq5s0'
+const token=process.env.TOKEN;
 const bot = new Telegraf( token)
 const User=require('./db');
 
 
+
+var level=0;
+ 
+bot.start((ctx) => {
+    ctx.reply("What is your name?")
+})
 var x = 0;
 var name;
 var college;
@@ -17,12 +24,6 @@ var frameworks;
 var projects;
 var confidence;
 var git;
-var level=0;
- 
-bot.start((ctx) => {
-    ctx.reply("What is your name?")
-})
-
 bot.on('message', (ctx) => {
     if (x == 0) {
         name = ctx.message.text
@@ -82,7 +83,7 @@ bot.on('message', (ctx) => {
         if(confidence==='Confident'||confidence==='Confident Enough'){
             level++;
         }
-        if(projects=='YES'&&lang.length>6){
+        if(projects=='Yes'&&lang.length>6){
             level++;
         }
 
