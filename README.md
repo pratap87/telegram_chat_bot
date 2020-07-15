@@ -1,6 +1,8 @@
 # telegram_chat_bot:
 A chat bot for getting information of user  developed using Node,MongoDb,Telegraf.js
 
+Server is deployed on herouku
+
 
 
 How to run
